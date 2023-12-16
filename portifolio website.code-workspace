@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "portifolio website",
+			"path": "."
+		},
+		{
+			"name": "images 2",
+			"path": "../../../../Downloads/images 2"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "portifolio website"
+	}
+}
