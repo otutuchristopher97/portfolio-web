@@ -20,7 +20,7 @@
                 <li><a href="#Converter">Converter</a></li>
                 <li><a href="#forecast">Forecast</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                <l1><i class="fa-solid fa-xmark" onclick="closemenu()"></i></li>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
@@ -30,7 +30,7 @@
         </div>
     </div>
 </div>
-<!-- ---------about------ -->
+<!--about-->
 <div id="about">
     <div class="container">
         <div class="row">
@@ -66,7 +66,7 @@
         </div>
     </div>
 </div>
-<!-- ------------Converter------------ -->
+<!--Converter-->
 <div id="Converter">
     <div class="container">
         <header>Currency Converter</header>
@@ -74,7 +74,7 @@
       <form action="#">
         <div class="amount">
           <p>Enter Amount</p>
-          <input id="inputAmount" type="number" value="1" pattern='[0-9]{10}'>
+          <input id="inputAmount" type="number" value="1">
         </div>
         <div class="drop-list">
           <div class="from">
@@ -105,7 +105,7 @@
       </form>
     </div>
 </div>
-<!-- --------------forecast------------- -->
+<!--forecast-->
 <div id="forecast">
     <div class="container">
         <div id="main_div">
@@ -136,7 +136,7 @@
         </div>
     </div>
 </div>
-<!-- ---------------contact------------- -->
+<!--contact-->
 <div id="contact">
     <div class="container">
         <div class="row">
@@ -202,24 +202,6 @@
 
 <script src="currency_converter/currency_converter.js"></script>
   
-<script src="form.js">
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz-VTW4Z5EKpANPp_zYOVDCxiQXMB0IJoAMiHmpgPZ-U3v-LcL0BYszydYSqgYxL_j3/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
     
 </body>
 </html>
