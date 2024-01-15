@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christopher Portifolio Website</title>
+    <title>Pamela Portifolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="forecaster/forecaster.css">
+    <link rel="stylesheet" type="text/css" href="currency_converter/currency_converter.css">
     <script src="https://kit.fontawesome.com/ec16ab97ca.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
     <div class="container">
         <nav>
-            <img src="image/logo.png" class="logo">
+            <a href="#" class="logo"><span>P</span>amela</a>
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portilio">Portilio</a></li>
+                <li><a href="#Converter">Converter</a></li>
+                <li><a href="#forecast">Forecast</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>Software Engineer</p>
-            <h1>Hi, I'm <span>Christopher</span><br>Otutu From Nigeria</h1>
+            <p>Frontend Developer</p>
+            <h1>Hi, I'm <span>Izedonmwen</span><br>Pamela From Nigeria</h1>
         </div>
     </div>
 </div>
@@ -33,7 +35,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="image/user.png">
+                <img src="image/p2.jpeg">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -47,22 +49,17 @@
                     <ul>
                         <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                         <li><span>Web Development</span><br>Web App Development</li>
-                        <li><span>Mobile App Development</span><br>Building Android/IOS apps</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institute</li>
-                        <li><span>2019 2021</span><br>Team lead at StarApp LLC.</li>
-                        <li><span>2017 - 2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
-                        <li><span>2016 - 2017</span><br>Internship at ekark eCommerce.</li>
+                        <li><span>2020 - 2022</span><br>Customer Support, First Bank Nigeria</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
                     <ul>
-                        <li><span>2016</span><br>UI/UX Design Training at ET Institute</li>
-                        <li><span>2016</span><br>MBA from MIT Bangalore</li>
-                        <li><span>2014</span><br>BBA from ISM Bangalore</li>
+                        <li><span>2018</span><br>BSc in Computer Science, Ebonyi state university</li>
+                        <li><span>2024</span><br>MSc in Computer Science, Staffordshire University</li>
                     </ul>
                 </div>
             </div>
@@ -70,65 +67,73 @@
     </div>
 </div>
 <!-- ------------services------------ -->
-<div id="services">
+<div id="Converter">
     <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi asperiores odit expedita consequuntur minima 
-                    omnis autem consequatur minus velit.</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-crop-simple"></i>
-                <h2>UI/UX Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi asperiores odit expedita consequuntur minima 
-                    omnis autem consequatur minus velit.</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>App Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi asperiores odit expedita consequuntur minima 
-                    omnis autem consequatur minus velit.</p>
-                <a href="#">Learn more</a>
-            </div>
+        <header>Currency Converter</header>
+      <p>You cannot convert amount greater than => 10,000</p>
+      <form action="#">
+        <div class="amount">
+          <p>Enter Amount</p>
+          <input id="inputAmount" type="number" value="1" pattern='[0-9]{10}'>
         </div>
+        <div class="drop-list">
+          <div class="from">
+            <p>From</p>
+            <div class="select-box">
+              
+              <select id="source_currency"> <!-- Options tag are inserted from JavaScript --> </select>
+            </div>
+          </div>
+          <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+          <div class="to">
+            <p>To</p>
+            <div class="select-box">
+      
+              <select id="destination_currency"> </select>
+            </div>
+          </div>
+        </div>
+       
+        <br>
+        <p id="currentExRate"></p>
+        <p id="exchangeRateTxt"></p>
+      
+        <p id="lstExchangeRateUpdate"></p>
+        <br>
+        
+        <button id="submitBtn">Get Exchange Rate</button>
+      </form>
     </div>
 </div>
-<!-- --------------portfolio------------- -->
-<div id="portfolio">
+<!-- --------------forecast------------- -->
+<div id="forecast">
     <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="image/work-1.png">
-                <div class="layer">
-                    <h3>Social Music App</h3>
-                    <p>The app contents you did are for people around the world. Download it from play store.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+        <div id="main_div">
+            <p id="mode_text">Historical Mode</p>
+            <div id="mode_btn_div">
+                <button id="mode_btn">Forecast Mode</button>
             </div>
-            <div class="work">
-                <img src="image/work-2.png">
-                <div class="layer">
-                    <h3>Music App</h3>
-                    <p>The app contents you did are for people around the world. Download it from play store.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
+          
+            <br>
+        
+            <canvas id="forecasterChart"></canvas>
+        
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+        
+        
+            <br>
+            <br>
+            <div class="flex-box-btn">
+            <button id="previous">Previous</button>
+            
+            <button id="next">Next</button>
             </div>
-            <div class="work">
-                <img src="image/work-3.png">
-                <div class="layer">
-                    <h3>Online Shopping App</h3>
-                    <p>The app contents you did are for people around the world. Download it from play store.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
+            <br>
+            <br>
+            <br>
+            
+            <script src="forecaster/forecaster_script.js"></script>
         </div>
-        <a href="#" class="btn">See more</a>
     </div>
 </div>
 <!-- ---------------contact------------- -->
@@ -137,8 +142,8 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="subtitle">Contact Me</h1>
-                <p><i class="fas fa-paper-plane"></i> contact@example.com</p>
-                <p><i class="fa-solid fa-square-phone"></i> +447900267212</p>
+                <p><i class="fas fa-paper-plane"></i> contact@pamela.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> +4479002663647</p>
                 <div class="social-icons">
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
@@ -161,7 +166,7 @@
         </div>
     </div>
     <div class="copyright">
-        <p>Copyright @ Christopher. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
+        <p>Copyright @ Pamela. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
     </div>
 </div>
 
@@ -194,6 +199,8 @@
         sidemenu.style.right = "-200px";
     }
 </script>
+
+<script src="currency_converter/currency_converter.js"></script>
   
 <script src="form.js">
     const scriptURL = 'https://script.google.com/macros/s/AKfycbz-VTW4Z5EKpANPp_zYOVDCxiQXMB0IJoAMiHmpgPZ-U3v-LcL0BYszydYSqgYxL_j3/exec'

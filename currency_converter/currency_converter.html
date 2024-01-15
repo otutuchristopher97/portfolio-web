@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="currency_converter.css" />
+    <title>Currency Converter</title>
+</head>
+
+
+
+<body>
+    <div class="wrapper">
+      <header>Currency Converter</header>
+      <p>You cannot convert amount greater than => 10,000</p>
+      <form action="#">
+        <div class="amount">
+          <p>Enter Amount</p>
+          <input id="inputAmount" type="number" value="1" pattern='[0-9]{10}'>
+        </div>
+        <div class="drop-list">
+          <div class="from">
+            <p>From</p>
+            <div class="select-box">
+              
+              <select id="source_currency"> <!-- Options tag are inserted from JavaScript --> </select>
+            </div>
+          </div>
+          <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+          <div class="to">
+            <p>To</p>
+            <div class="select-box">
+      
+              <select id="destination_currency"> </select>
+            </div>
+          </div>
+        </div>
+       
+        <br>
+        <p id="currentExRate"></p>
+        <p id="exchangeRateTxt"></p>
+      
+        <p id="lstExchangeRateUpdate"></p>
+        <br>
+        
+        <button id="submitBtn">Get Exchange Rate</button>
+      </form>
+    </div>
+  
+    <script src="currency_converter.js"></script>
+  </body>
+
+
+
+</html>

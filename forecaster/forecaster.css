@@ -1,0 +1,117 @@
+:root{
+  --bg-color: #1f1f21;
+  --text-color: #fff;
+  --black-color: #090C02;
+  --main-color: #41CE8E;
+  /* --main-color: #ff004f; */
+  --lightgrey-color: #c3c3c3;
+
+  --big-font: 5rem;
+  --p-font: 1.1rem;
+}
+
+  #mode_text{
+        text-align: center;
+
+        font-size: 30px;
+        font-weight: bold;
+        
+  }
+
+  .flex-box-btn{
+    display: flex;
+    justify-content:space-between;
+ 
+  }
+
+  .flex-box-btn button {
+   
+    background-color: #ff004f;
+
+    color: white;
+    
+
+    padding: 10px 20px;
+    
+ 
+    border: none;
+    
+
+    border-radius: 5px;
+   
+  }
+
+  #mode_btn_div{
+    text-align: center;
+
+  }
+
+  #mode_btn {
+   
+    background-color: green;
+
+    color: white;
+    
+
+    padding: 10px 20px;
+    
+ 
+    border: none;
+    
+
+    border-radius: 5px;
+
+  
+   
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #main_div{
+      width: 900px;
+    } 
+  }
+  @media only screen and (max-width: 900px) {
+    #main_div{
+      width: 800px;
+    } 
+  }
+
+  @media only screen and (max-width: 700px) {
+    #main_div{
+      width: 600px;
+    } 
+  }
+
+  @media only screen and (max-width: 800px) {
+    #main_div{
+      width: 700px;
+    } 
+  }
+
+  @media only screen and (max-width: 700px) {
+    #main_div{
+      width: 600px;
+    } 
+  }
+
+  @media only screen and (max-width: 600px) {
+    #main_div{
+      width: 550px;
+    } 
+  }
+
+  @media only screen and (max-width: 580px) {
+    #main_div{
+      width: 510px;
+    } 
+  }
+
+  @media only screen and (max-width: 500px) {
+    #main_div{
+      width: 500px;
+    } 
+  }
+
+
+
+ 
